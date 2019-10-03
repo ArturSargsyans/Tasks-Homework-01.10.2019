@@ -12,7 +12,12 @@ class TaskManager:
 
     def addTask(self, task):
         self.tasks.append(task)
-
+    
+    def printAllTasks(self):
+        for task in self.tasks:
+            print(task.name, task. deadline)
+            
+    
     def printTheMostImportantTasks(self):
         for task in self.tasks:
             if task.level > 5:
@@ -34,7 +39,9 @@ def main():
 
     t = Task("sister's birthday gift", "22/10/19", 10)
     personalTasks.addTask(t)
-
+    
+    auaTasks.printAllTasks()
+    
     auaTasks.printTheMostImportantTasks()
 
 main()
